@@ -34,4 +34,6 @@ void camp_ll_insert_at_tail(CampLL* list, void* data);
 
 void camp_ll_dump(CampLL* list);
 
+void* camp_ll_get_at_index(CampLL* list, size_t index);
+
 void camp_ll_destroy(CampLL* list);

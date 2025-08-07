@@ -74,6 +74,24 @@ void camp_ll_insert_at_tail(CampLL* list, void* data) {
     list->list_size ++;
 }
 
+void* camp_ll_get_at_index(CampLL* list, size_t index) {
+    if (index > list->list_size) {
+        printf("[Error] index is %zu but list size is %zu", index, list->list_size);
+    }
+    
+    CampLLNode* node = list->head_node;
+    for (int i = 0; i < index; ++i) {
+        if (node == NULL) {
+            return NULL;
+        }
+        node = node->next;
+    }
+
+    void* final_node_data = node->data;
+
+    return final_node_data;
+}
+
 void camp_ll_dump(CampLL* list) {
     CampLLNode* node = list->head_node;
     for (size_t i = 0; i < list->list_size; ++i) {
