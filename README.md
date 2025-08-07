@@ -68,3 +68,22 @@ just like camp_array you init it with:
 ```
 
 > It also supports any type you trow at it
+
+### Possible Functions
+> [!WARNING]
+> still incomplete
+
+``` c
+// inserts as the first element, O(1)
+void camp_ll_insert_at_head(CampLL* list, void* data);
+
+// inserts as the last element, O(1)
+void camp_ll_insert_at_tail(CampLL* list, void* data);
+
+// dumps the linked list
+void camp_ll_dump(CampLL* list);
+
+// returns the data from the node at the given index, O(n)
+void* camp_ll_get_at_index(CampLL* list, size_t index);
+```
+
