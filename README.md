@@ -3,6 +3,12 @@
 > [!WARNING]
 > Work in progress!
 
+# Info
+This is a small library for handleing common data structures in C.
+These currently include:
+ - CampArray - dynamic array that supports any type of data
+ - CampLL - linked list
+
 # Usage
 
 ## CampArray
