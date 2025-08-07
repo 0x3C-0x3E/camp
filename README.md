@@ -51,3 +51,20 @@ void camp_array_clear(CampArray* array);
 // equivalent of calling camp_array_new but only malloc'ing the data not the whole struct
 void camp_array_reset(CampArray* array);
 ```
+
+## CampLL
+> Quick side note:
+>   LL stands for Linked-List because i am too lazy to type that all out
+
+just like camp_array you init it with
+
+## CampLL
+> Quick side note:
+>   LL stands for Linked-List because i am too lazy to type that all out
+
+just like camp_array you init it with:
+```c
+    CampLL* list = camp_ll_new(sizeof(YOURTYPE));
+```
+
+> It also supports any type you trow at it
