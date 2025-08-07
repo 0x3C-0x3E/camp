@@ -56,12 +56,6 @@ void camp_array_reset(CampArray* array);
 > Quick side note:
 >   LL stands for Linked-List because i am too lazy to type that all out
 
-just like camp_array you init it with
-
-## CampLL
-> Quick side note:
->   LL stands for Linked-List because i am too lazy to type that all out
-
 just like camp_array you init it with:
 ```c
     CampLL* list = camp_ll_new(sizeof(YOURTYPE));
