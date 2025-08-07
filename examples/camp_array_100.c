@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// this is just for consistencys sake
+// this is just for consistency sake
 #include "../src/camp.h"
 
 int main(void) {

@@ -1,7 +1,7 @@
 #include "../camp.h"
 #include "tests.h"
 
-int test1(void) {
+int arr_test1(void) {
     CampArray* my_arr = camp_array_new(sizeof(int));
     
     for (size_t i = 0; i < 10; i++) {

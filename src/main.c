@@ -2,7 +2,7 @@
 #include "tests/tests.h"
 
 int main(void) {
-    printf("-- Starting Test 1 --\n");
-    test1();
+    printf("-- Starting LL test 1--\n");
+    ll_test1();
     return 0;
 }

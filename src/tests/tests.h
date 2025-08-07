@@ -1,3 +1,5 @@
 #pragma once
 
-int test1(void);
+int arr_test1(void);
+
+int ll_test1(void);

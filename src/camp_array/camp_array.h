@@ -46,5 +46,6 @@ void camp_array_clear(CampArray* array);
 
 // equivalent of calling camp_array_new but only malloc'ing the data not the whole struct
 void camp_array_reset(CampArray* array);
-void camp_array_destroy(CampArray* array);
 
+// free the array and the data ptr
+void camp_array_destroy(CampArray* array);
