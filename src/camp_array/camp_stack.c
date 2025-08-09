@@ -26,6 +26,10 @@ void camp_stack_pop(CampStack* stack, void* item) {
     camp_array_remove(stack->stack, stack->stack->size - 1);
 }
 
+size_t camp_stack_get_size(CampStack* stack) {
+    return camp_array_get_size(stack->stack);
+}
+
 // free the stack
 void camp_stack_destroy(CampStack* stack) {
     camp_array_destroy(stack->stack);

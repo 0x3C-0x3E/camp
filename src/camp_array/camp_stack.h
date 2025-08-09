@@ -19,5 +19,8 @@ void camp_stack_push(CampStack* stack, void* item);
 // memcpy into item and frees the last one one the stack
 void camp_stack_pop(CampStack* stack, void* item);
 
+// returns the size of the stack
+size_t camp_stack_get_size(CampStack* stack);
+
 // free the stack
 void camp_stack_destroy(CampStack* stack);

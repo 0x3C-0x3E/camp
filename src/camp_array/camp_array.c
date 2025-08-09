@@ -100,11 +100,16 @@ void camp_array_set(CampArray* array, size_t index, void* item) {
 }
 
 void camp_array_remove(CampArray* array, size_t index) {
-    if (check_index(array, index)) {return;}
-
-    for (size_t i = index; i < array->size; i++) {
-        memcpy(array->data + i * array->type_size, array->data + (i + 1) * array->type_size, array->type_size);
+    if (check_index(array, index)) {
+        return;
     }
+
+    size_t bytes_to_move = (array->size - 1 - index) * array->type_size;
+
+    memmove(array->data + index * array->type_size, 
+            array->data + (index + 1) * array->type_size,
+            bytes_to_move);
+
     array->size --;
 }
 
@@ -136,7 +141,7 @@ void camp_array_destroy(CampArray* array) {
 }
 
 static bool check_index(CampArray* array, size_t index) {
-    if (index > array->size) {
+    if (index > array->size - 1) {
         printf("ERROR: failed because index was %zu but size was %zu\n", index, array->size);
         return true;
     }

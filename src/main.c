@@ -3,6 +3,10 @@
 
 int main(void) {
     printf("-- Starting LL test 1--\n");
-    ll_test1();
+
+    if (arr_test1() == 1) {
+        printf("FAILED TEST!\n");
+        return 1;
+    }
     return 0;
 }

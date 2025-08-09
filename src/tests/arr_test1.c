@@ -7,10 +7,20 @@ int arr_test1(void) {
     for (size_t i = 0; i < 10; i++) {
         camp_array_append(my_arr, &i);
     }
+    
 
     for (size_t i = 9; i > 0; --i) {
-        if (i % 2 == 0) {
+        int* x = camp_array_get(my_arr, i);
+        if (*x % 2 == 0) {
             camp_array_remove(my_arr, i);
+        }
+    }
+    camp_array_dump(my_arr);
+
+    for (size_t i = 1; i < camp_array_get_size(my_arr); ++i) {
+        int* x = camp_array_get(my_arr, i);
+        if (*x % 2 == 0) {
+            return 1;
         }
     }
 
