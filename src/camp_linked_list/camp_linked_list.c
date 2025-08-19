@@ -159,7 +159,7 @@ CampLLNode* camp_ll_get_node_at_index(CampLL* list, size_t index) {
     }
     
     CampLLNode* node = list->head_node;
-    for (int i = 0; i < index; ++i) {
+    for (size_t i = 0; i < index; ++i) {
         if (node == NULL) {
             return NULL;
         }

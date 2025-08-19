@@ -4,7 +4,7 @@
 int main(void) {
     printf("-- Starting LL test 1--\n");
 
-    if (arr_test1() == 1) {
+    if (arr_qsort_test() == 1) {
         printf("FAILED TEST!\n");
         return 1;
     }
